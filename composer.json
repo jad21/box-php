@@ -1,0 +1,14 @@
+{
+    "name": "jad21/box-php",
+    "description": "Container Moduler php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jose Angel",
+            "email": "esojangel@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
