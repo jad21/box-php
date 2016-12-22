@@ -3,12 +3,15 @@
     "description": "Container Moduler php",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Jose Angel",
-            "email": "esojangel@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Jose Angel",
+        "email": "esojangel@gmail.com"
+    }],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Box\\": "src/"
+        }
+    }
 }
