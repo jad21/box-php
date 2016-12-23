@@ -34,6 +34,11 @@ class Container implements \ArrayAccess
         foreach ($values as $name => $value) {
             $this->offsetSet($name, $value);
         }
+        
+        if (in_array('Box\Traits\StaticTrait', class_uses($this))) {
+
+            static::$instance = $this;
+        }
     }
 
     /**

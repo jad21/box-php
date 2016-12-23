@@ -87,6 +87,16 @@ class ModuleManager implements \IteratorAggregate
     }
 
     /**
+     * Gets all modules.
+     *
+     * @return array
+     */
+    public function getRegistered()
+    {
+        return $this->registered;
+    }
+
+    /**
      * Loads modules by name.
      *
      * @param  string|array $modules
@@ -142,7 +152,7 @@ class ModuleManager implements \IteratorAggregate
         foreach ((array) $paths as $path) {
 
             $files = glob($this->resolvePath($path, $basePath), GLOB_NOSORT) ?: [];
-
+            
             foreach ($files as $file) {
 
                 if (!is_array($module = include $file) || !isset($module['name'])) {

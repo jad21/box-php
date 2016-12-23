@@ -3,6 +3,7 @@
 namespace Box;
 
 use Box\Module\ModuleManager;
+use Box\Traits\StaticTrait;
 
 /**
  *      Class container
@@ -11,6 +12,7 @@ use Box\Module\ModuleManager;
  */
 class Application extends Container
 {
+    use StaticTrait;
     /**
      * Constructor.
      *
@@ -22,7 +24,7 @@ class Application extends Container
 
         $this['module'] = function () {
             return new ModuleManager($this);
-         };
+        };
     }
     public function run() {}
     /**
